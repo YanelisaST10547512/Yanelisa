@@ -13,18 +13,20 @@ public class RegestrationLoginApp {
     /**
      * @param args the command line arguments
      */
-    
-    }
-    public static void main(String[] args) {
+     public static void main(String[] args) {
        RegistrationLogin key = new RegistrationLogin();
+       Message lisa = new Message();
         
        System.out.println("REGISTRATION");
-       System.out.println(key.registration());
+      System.out.println(key.registration());
        
        System.out.println("LOGIN");
        boolean LoginStatus = key.loginPrompt();
        System.out.println(key.returnLoginStatus(LoginStatus));
+       lisa.yane();
     }
+    }
+   
        
         
     
