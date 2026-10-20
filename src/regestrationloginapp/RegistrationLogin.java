@@ -1,4 +1,4 @@
- 
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
@@ -6,8 +6,12 @@
 package regestrationloginapp; 
         
 import java.util.Scanner;
+import.java.util.yane.Pattern;
 
-  
+    boolean registration() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
    
 /**
  *
@@ -16,10 +20,9 @@ import java.util.Scanner;
 public class RegistrationLogin {
     
     String username;
-  String password;
-String cellphone;
-    Scanner input = new Scanner (System.in);
-   
+  private  String password;
+ private String cellphone;
+    private Scanner input = new Scanner (System.in);
     
     public String registration(){
      StringBuilder user = new StringBuilder();   
@@ -58,7 +61,8 @@ String cellphone;
         return null;
     }
   
-  public boolean checkUsername(String username){
+  public boolean checkUsername(String uername){
+      regestrationlogin.username = username;
       if(username.contains("_")&& username.length()<=5){
           System.out.println("Username Successfully Captured");
           return true;
@@ -68,17 +72,14 @@ String cellphone;
       } 
          return false;
   }
-  
-   public boolean checkPasswordComplexity(String password){
+      
    boolean length = password.length()>=8;
    boolean hasUpper = password.matches(".*[A-Z].*");
    boolean hasDigit = password.matches(".*[0-9].*");
    boolean hasSpecial = password.chars().anyMatch(c-> !Character.isLetterOrDigit(c));
    
   return length && hasUpper && hasDigit && hasSpecial;
-  
-}
-
+  }
  public boolean checkCellphone (String cellphone){
      String yane = "^\\+27[0-9]{9}$";
      
@@ -86,7 +87,7 @@ String cellphone;
    }  
  public boolean loginPrompt() {
      System.out.println("Enter username");
-     String enteredUsername = input.nextLine();
+     String eneteredUsername = input.nextLine();
      
      System.out.println("Enter password");
      String enteredPassword = input.nextLine();
@@ -104,5 +105,4 @@ String cellphone;
     return "Failed login, please try again";
     }
  
-}
 }

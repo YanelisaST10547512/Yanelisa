@@ -45,7 +45,7 @@ public class RegestrationLoginAppTest {
         RegistrationLogin instance = new RegistrationLogin ();
         instance.username = "yane_";
         boolean expResult = true;
-        boolean result = instance.checkUsername(instance.username);
+        boolean result = instance.checkusername(instance.username);
         assertEquals(expResult, result);
     }
     public void testInValidUsername(){
@@ -77,17 +77,17 @@ public class RegestrationLoginAppTest {
     public void testcheckCellPhoneNumber(String cellphoneNumber){
         System.out.println("+27614066398");
         RegistrationLogin instance = new RegistrationLogin();
-        instance.cellphone = "+27614066398";
+        instance.cellphoneNumber = "+27614066398";
        boolean expResult = true;
-       boolean result = instance.checkCellphone("valid CellPhoneNumber");
+       boolean result = instance.checkCellPhoneNumber("valid CellPhoneNumber");
        assertEquals(expResult, result); 
     }
     public void testCellPhoneNumber(String CellphoneNumber){
         System.out.println("+27614066398");
         RegistrationLogin instance = new RegistrationLogin();
-        instance.cellphone = "+27614066398";
+        instance.CellPhoneNumber = "+27614066398";
        boolean expResult = false;
-       boolean result = instance.checkCellphone("invalid CellPhoneNumber");
+       boolean result = instance.checkCellPhoneNumber("invalid CellPhoneNumber");
        assertEquals(expResult, result); 
     
     }
